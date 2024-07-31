@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  /* Advanced CSS for the HTML document */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    animation: heart-beat 2s infinite ease-in-out;
+}
+
+@keyframes heart-beat {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(1px 1px 30px rgb(0, 0, 0));
+    }
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(1px 1px 45px rgb(255, 255, 255)); 
+    }
+}
+
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    img {
+        width: 90%;
+        object-fit: contain;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <img src="./pen.png" alt="">
+</body>
+
+</html>

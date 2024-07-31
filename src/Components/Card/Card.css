@@ -1,0 +1,99 @@
+.card {
+    background-color: #5a5a5a;
+    /* Dark gray background */
+    border-radius: 10px;
+    /* Rounded corners */
+    position: relative;
+    /* Required for pseudo-element positioning */
+    height: 220px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: inset rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 300px;
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    opacity: 1;
+    filter: brightness(1) grayscale(0%) blur(0);
+}
+
+.card:hover~.card:hover {
+    filter: brightness(1) grayscale(0%) blur(0);
+    opacity: 1;
+}
+
+.card:hover~.card {
+    opacity: 0.5;
+    filter: brightness(0.5) grayscale(100%) blur(0.9px);
+}
+
+.card:has(+ * :hover),
+.card:has(+ * + * :hover),
+.card:has(+ * + * + * :hover),
+.card:has(+ * + * + * + * :hover),
+.card:has(+ * + * + * + * + * :hover),
+.card:has(+ * + * + * + * + * + * :hover),
+.card:has(+ * + * + * + * + * + * + * :hover) {
+    opacity: 0.5;
+    filter: brightness(0.5) grayscale(100%) blur(0.9px);
+}
+
+/* .card:hover {
+    transform: scale(1.1);
+    box-shadow:  rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    filter: brightness(1);
+}
+
+.card:has(+ * + * + * + * + * + * + *:hover),
+.card:hover + * + * + * + * + * + * + * {
+    filter: brightness(0.6);
+} */
+.cardName {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.carddescription {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: justify;
+    hyphens: auto;
+    font-weight: 500;
+}
+
+.cardCounter {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+.cardCounter>span {
+    font-size: 2rem;
+}
+
+
+@media (max-width: 600px) {
+    .card {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .cardName {
+        font-size: 20px;
+    }
+
+    .carddescription {
+        font-size: 14px;
+    }
+}
