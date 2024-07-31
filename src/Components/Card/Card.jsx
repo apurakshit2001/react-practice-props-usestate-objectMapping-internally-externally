@@ -13,7 +13,7 @@ const Card = (props) => {
 
             <p className='carddescription'>{props.cardDescription}</p>
 
-            <p className='cardCounter'>Counter : <span>{count}</span></p>
+            <p className='cardCounter'>Clicked : <span>{count}</span></p>
 
             <button className="button-64" role="button" onClick={increment}>
                 <span className="text">{props.buttonName}</span>
