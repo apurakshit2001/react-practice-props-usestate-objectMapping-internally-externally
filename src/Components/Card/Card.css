@@ -1,10 +1,8 @@
 .card {
-    background-color: #5a5a5a;
-    /* Dark gray background */
+    background-color: #575656;
+   color: white;
     border-radius: 10px;
-    /* Rounded corners */
     position: relative;
-    /* Required for pseudo-element positioning */
     height: 220px;
     width: 150px;
     display: flex;
@@ -16,6 +14,21 @@
     margin: 20px;
     max-width: 300px;
     transition: all 0.4s ease-in-out;
+    border: 50px solid;
+    /* outline: 5px solid white; */
+    /* outline-offset: -45px; */
+    border-image: repeating-conic-gradient(
+        from 45deg at 25% 25%,
+        #81315d 0deg 10deg,
+        #d82347 10deg 20deg,
+        #fd953b 20deg 30deg,
+        #fe672c 30deg 40deg,
+        #ff292c 40deg 50deg,
+        #29cdff 50deg 60deg,
+        #2d29ff 60deg 70deg
+    )9;
+    /* border-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB); */
+    /* border-image-slice: 1; */
 }
 
 .card:hover {
@@ -23,6 +36,15 @@
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     opacity: 1;
     filter: brightness(1) grayscale(0%) blur(0);
+    border-image: repeating-linear-gradient(
+        45deg,
+        #47d3ff,
+        #47d3ff 16px,
+        #474bff 16px,
+        #474bff 30px
+    )40;
+    background-color: #ffffffec;
+    color: black;
 }
 
 .card:hover~.card:hover {
@@ -58,13 +80,11 @@
 } */
 .cardName {
     font-size: 24px;
-    color: #ffffff;
     font-weight: bold;
 }
 
 .carddescription {
     font-size: 16px;
-    color: #ffffff;
     line-height: 1.5;
     margin-bottom: 0;
     text-align: justify;
@@ -74,7 +94,6 @@
 
 .cardCounter {
     font-size: 16px;
-    color: #ffffff;
     margin-top: 0px;
 }
 
